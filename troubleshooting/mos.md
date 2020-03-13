@@ -1,6 +1,6 @@
 [title]: # (Microsoft Online Services)
 [tags]: # (troubleshooting)
-[priority]: # (82)
+[priority]: # (83)
 # Using Web Password Filler with Microsoft Online Services
 
 This section guides users through using the Web browser extension to use SS WPF to log on Microsoft Online. Launching Microsoft Online secrets with WPF takes a bit of extra configuration. This section explains the issue and suggests remedies.
