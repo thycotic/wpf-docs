@@ -1,4 +1,4 @@
-[title]: # (Getting Started)
+[title]: # (Terminology)
 [tags]: # (WPF)
 [priority]: # (11)
 # Terminology
