@@ -1,7 +1,6 @@
 [title]: # (Connecting with Secret Server)
 [tags]: # (WPF)
 [priority]: # (20)
-
 # Connecting with Secret Server
 
 After installation, you must configure WPF to connect with SS before logging on the Website. You can use the Configuration tab on the WPF to configure it with the SS instance of your choice.
@@ -16,10 +15,10 @@ To connect WPF with SS:
 
 1. Click the **Configuration** tab:
 
-     ![image-20191205101911389](images/image-20191205101911389.png)
+   ![image-20191205101911389](images/image-20191205101911389.png)
 
 1. In the **Secret Server URL** text box, type your SS URL. For example: `https://myserver/secretserver/`
 
 1. In the **Domain** text box, type the domain of Secret Server. This only applies if you set up SS to use a domain.
 
-1. Click the **Save** button. A confirmation message appears. WPF’s connection settings are now saved.
+1. Click the **Save** button. A confirmation message appears. WPF's connection settings are now saved.
