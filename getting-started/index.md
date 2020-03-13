@@ -1,7 +1,6 @@
 [title]: # (Getting Started)
 [tags]: # (WPF)
 [priority]: # (10)
-
 # Getting Started
 
 Please set up WPF in the following order:
