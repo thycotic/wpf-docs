@@ -3,7 +3,7 @@
 [priority]: # (61)
 # RegEx in WPF
 
-RegEx is a sequence of patterns used in Secret Server templates and provided in Web Password Filler (WPF) allowing session recording on redirected websites.  
+RegEx is a sequence of patterns specified in Secret Server templates and provided to be specified as __OtherUrls__ during account setup in Web Password Filler (WPF), allowing session recording on redirected websites.
 
 When a user is logged into a website using a secret and session recording is enabled, WPF will record a session for that URL. If a user is redirected to another URL and session recording should continue for the redirected URL, those URLs can be added in the __OtherUrls__ field when the account is added.
 
