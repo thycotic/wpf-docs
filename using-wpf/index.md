@@ -1,6 +1,6 @@
 [title]: # (Login to Website)
 [tags]: # (WPF)
-[priority]: # (60)
+[priority]: # (4)
 # Login to Website
 
 Once WPF is set up and you are logged into Secret Server, logging into the website is very easy:

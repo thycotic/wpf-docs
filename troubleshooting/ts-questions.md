@@ -1,15 +1,13 @@
-[title]: # (Questions to Ask)
+[title]: # (Investigation)
 [tags]: # (WPF)
 [priority]: # (81)
-# Questions to Ask when Troubleshooting WPF Issues
+# Investigating WPF Issues
 
-When investigating issues with the Web Password Filler (WPF) the following
-questions should help narrow down the issue or provided needed information to
-troubleshoot.
+When investigating issues with the Web Password Filler (WPF) the following questions should help narrow down the issue or provided needed information to troubleshoot.
 
 ## Confirm WPF Version
 
-Confirm that the issue is with the new Web Password Filler that was first released in Dec 2019 and in conjunction with SS v10.7.59.
+Confirm that the issue is with the new Web Password Filler that was first released in Dec 2019 and in conjunction with Secret Serverv10.7.59.
 
 Problems with other browser extensions/plugins (e.g. Login Assist, Clipboard Utility etc.) should not be deemed as WPF issues.
 

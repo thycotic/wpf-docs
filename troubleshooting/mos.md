@@ -3,10 +3,10 @@
 [priority]: # (83)
 # Using Web Password Filler with Microsoft Online Services
 
-This section guides users through using the Web browser extension to use SS WPF to log on Microsoft Online. Launching Microsoft Online secrets with WPF takes a bit of extra configuration. This section explains the issue and suggests remedies.
+This section guides users through using the Web browser extension to use Secret ServerWPF to log on Microsoft Online. Launching Microsoft Online secrets with WPF takes a bit of extra configuration. This section explains the issue and suggests remedies.
 
 > **Note**:
->This version of WPF is available in SS release 10.7.59 and later.
+>This version of WPF is available in Secret Serverrelease 10.7.59 and later.
 >These instructions assume you have WPF installed correctly and are connected to SS. If Microsoft Online is your first site using WPF, we suggest first testing your installation on another site.
 
 ## The Problem
@@ -38,7 +38,7 @@ So all that is needed is to ensure the secret stores the permanent URL, not the 
 There are two ways to do this:
 
 - **Before Saving the WPF Secret:** Change the URL when it is initially stored, right from WPF, *before* the secret is saved. This method is available if you create a new WPF secret using the WPF Add Secret button or the browser's context (right click) menu.
-- **After Saving the WPF Secret:** Change the URL after the WPF secret is stored in SS. This method is the only option if the WPF secret has already been saved in SS with the one-time redirected URL. This could happen because the WPF secret was created by an earlier WPF version or because you created the secret using the automatic secret creation feature, which captured the one-time redirected URL rather than the permanent one.
+- **After Saving the WPF Secret:** Change the URL after the WPF secret is stored in SS. This method is the only option if the WPF secret has already been saved in Secret Serverwith the one-time redirected URL. This could happen because the WPF secret was created by an earlier WPF version or because you created the secret using the automatic secret creation feature, which captured the one-time redirected URL rather than the permanent one.
 
 ## Fixing the Issue When Creating the WPF Secret
 

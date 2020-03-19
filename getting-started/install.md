@@ -1,9 +1,9 @@
 [title]: # (Installing Browser Extensions)
 [tags]: # (WPF, browser extension)
-[priority]: # (40)
+[priority]: # (20)
 # Installing Browser Extensions
 
-To use WPF, you must first install the browser extension for Chrome, Firefox, or Opera:
+To use WPF, you must first install the browser extensions for the browser of your choice:
 
 - **Chrome:** Install the extension by clicking on the Web launcher icon on a Web password secret or install the extension by [downloading it from the Google Chrome Web Store](https://chrome.google.com/webstore/detail/secret-server-web-passwor/mfpddejbpnbjkjoaicfedaljnfeollkh?hl=en).
 - **Firefox:** Install the Firefox extension by clicking on the Web launcher icon on a Web password secret or install the extension by [downloading it from the Firefox Add Ons Site](https://addons.mozilla.org/en-US/firefox/addon/thycotic-password-filler/).

@@ -1,7 +1,7 @@
-[title]: # (RegEx)
+[title]: # (Session Recording)
 [tags]: # (WPF)
-[priority]: # (61)
-# RegEx in WPF
+[priority]: # (10)
+# Session Recording Redirects
 
 RegEx is a sequence of patterns specified in Secret Server templates and provided to be specified as __OtherUrls__ during account setup in Web Password Filler (WPF), allowing session recording on redirected websites.
 

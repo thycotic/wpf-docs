@@ -1,6 +1,6 @@
 [title]: # (Log out Secret Server)
 [tags]: # (WPF)
-[priority]: # (70)
+[priority]: # (5)
 # Log out from Secret Server
 
 Use the WPF icon to logout:
