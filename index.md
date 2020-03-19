@@ -7,6 +7,6 @@ The Thycotic Web Password Filler (WPF) is a Web browser extension to help users 
 
 Secret Server stores credentials, as secrets, for different URLs. When you access a URL, WPF fetches the available secrets for that URL. You can then select the appropriate credential.
 
-In addition to logging on, WPF enables you to add a new secret or update an existing secret. You can use WPF to generate a strong password for a username. WPF includes a context menu for easy usage.
+In addition to the login, WPF enables you to add a new secret or update an existing secret. You can use WPF to generate a strong password for a username. WPF includes a context menu for easy usage.
 
->**Note:** You can access the WPF extension from Secret Server too.
+>**Note**: You can access the WPF extension from Secret Server too.

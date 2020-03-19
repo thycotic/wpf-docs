@@ -1,9 +1,13 @@
-[title]: # (Login to Website)
+[title]: # (Using WPF)
 [tags]: # (WPF)
 [priority]: # (4)
-# Login to Website
+# Using WPF
 
-Once WPF is set up and you are logged into Secret Server, logging into the website is very easy:
+Once WPF is set up and you are logged into Secret Server, you can use WPF to log in to websites for which Secrets are managed via Secret Server. 
+
+Refer to [Creating a Secret for a Website](creating-a-secret-for-a-website.md) if you need to add new accounts.
+
+## Log in to a Website
 
 1. Take a quick look at your WPF button on your browser's button bar. If it is grayed out, you will need to log on Secret Server and return here.
 
@@ -11,7 +15,7 @@ Once WPF is set up and you are logged into Secret Server, logging into the websi
 
    ![image-20191205162559891](images/image-20191205162559891.png)
 
-   >**Note:** If you are logged on WPF and do not see the green check in the username text box, please try refreshing the web page to make it appear.
+   >**Note**: If you are logged on WPF and do not see the green check in the username text box, please try refreshing the web page to make it appear.
 
 1. Click the Thycotic logo. A WPF popup opens and one of two things can happen:
 
