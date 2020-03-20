@@ -1,6 +1,6 @@
 [title]: # (Login to Secret Server)
 [tags]: # (WPF)
-[priority]: # (40)
+[priority]: # (5)
 # Login to Secret Server
 
 Before you have access to any secrets that apply to your websites, you must first log in and connect WPF to Secret Server. There are two ways to do this. The first is by entering your credentials into WPF and having it verify back with Secret Server. The second is by redirecting the login (through a new browser tab) back to Secret Server and using the Secret Server Web login to make the connection.
