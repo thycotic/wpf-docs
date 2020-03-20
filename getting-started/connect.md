@@ -1,6 +1,6 @@
 [title]: # (Connecting with Secret Server)
 [tags]: # (WPF)
-[priority]: # (30)
+[priority]: # (4)
 # Connecting with Secret Server
 
 After installation, you must configure WPF to connect with Secret Server before logging on the Website. You can use the Configuration tab on WPF to configure it with the Secret Server instance of your choice.

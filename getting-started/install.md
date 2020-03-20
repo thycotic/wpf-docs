@@ -1,6 +1,6 @@
 [title]: # (Installing Browser Extensions)
 [tags]: # (WPF, browser extension)
-[priority]: # (20)
+[priority]: # (3)
 # Installing Browser Extensions
 
 To use WPF, you must first install the browser extensions for the browser of your choice:
