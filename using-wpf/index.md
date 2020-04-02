@@ -5,7 +5,7 @@
 
 Once WPF is set up and you are logged into Secret Server, you can use WPF to log in to websites for which Secrets are managed via Secret Server. 
 
-Refer to [Creating a Secret for a Website](creating-a-secret-for-a-website.md) if you need to add new accounts.
+Refer to [Creating a Secret for a Website](create.md) if you need to add new accounts.
 
 ## Log in to a Website
 
@@ -27,6 +27,6 @@ Refer to [Creating a Secret for a Website](creating-a-secret-for-a-website.md) i
 
      ![image-20191205162836870](images/image-20191205162836870.png "Add a secret modal")
 
-   If you see the second possibility, you need to set up a secret for that website. See [Creating a Secret for a Website](../creating-a-secret-for-a-website/index.md).
+   If you see the second possibility, you need to set up a secret for that website. See [Creating a Secret for a Website](create.md).
 
 1. Click the button for the desired secret, and you are signed in.

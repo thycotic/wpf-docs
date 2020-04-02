@@ -47,7 +47,7 @@ There are two ways to do this:
 If you have not yet created the secret, follow this method:
 
 1. Go to the Microsoft Online log on (you already have an account and log on) or log-on setup page (you are setting up a new log on).
-1. Follow the [Creating a Secret](../../secret-management/procedures/creating-secrets/index.md) procedure.
+1. Follow the [Creating a Secret](../../ss/10.8.0/secret-management/procedures/creating-secrets/index.md) procedure.
 1. When you get to the *second* "Add Account to Secret Server" popup, which looks like this:
 
    ![image-20191212114103031](images/image-20191212114103031.png)
@@ -55,7 +55,7 @@ If you have not yet created the secret, follow this method:
    You now see the website URL that WPF inferred, which is incorrect. The secret name was inferred too—leave it as is or change it to whatever you like.
 
 1. Delete all the text after .com in the **URL** text box. Your URL should look like this: `https://login.microsoftonline.com`
-1. Return to and complete the rest of the instructions for the [Creating a Secret](../../secret-management/procedures/creating-secrets/index.md) procedure.
+1. Return to and complete the rest of the instructions for the [Creating a Secret](../../ss/10.8.0/secret-management/procedures/creating-secrets/index.md) procedure.
 
 ## Fixing the Issue After Having Saved the WPF Secret
 
