@@ -21,3 +21,25 @@ Currently this field supports only URLs.
 
    In the field __OtherUrls__,  enter any other URL for which session recording should enabled, in the event that the user is redirected to those URLs.  
 1. Click __Add__.
+
+## Setup in Secret Server
+
+1. Sign into Secret Server and navigate to __Admin | Secret Templates__.
+
+   ![templates](images/create-secret.png "Templates pages with create new button")
+1. Click __Create New__.
+1. Name the new secret and click __Create__.
+
+   ![create new page](images/create-secret-2.png "Create new secret template page")
+1. On the __Settings__ page, click __Configure Extended Mappings__.
+
+   ![extended map](images/create-secret-3.png "Settings page with configure extended mappings button")
+1. On the __Secret Template Extended Mappings__ page click __Add New Mapping__.
+
+   ![config](images/create-secret-4.png "Secret Template Extended Mappings page with drop-down menus")
+
+   1. From the __Extended Mapping to use__ drop-down select __Regex List__.
+   1. From the __Regex List Field__ drop-down select __OtherUrls__.
+   1. Click __Save__.
+
+The template is now ready to be used in WPF.
