@@ -21,7 +21,7 @@
 
    Secret Server fills in some of the text boxes for you based on the current website.
 
-   If you are setting up a secret for Microsoft Online, leave the modal as is (do not close it) and read [Using WPF with Microsoft Online Services](../troubleshooting/mos.md) before continuing.
+   If you are setting up a secret for Microsoft Online, leave the modal as is (do not close it) and read [Using WPF with Microsoft Online Services](mos.md) before continuing.
    1. The __Secret Name__ text box is pre-filled by WPF, you may customize to a sensible name that identifies the secret well in a multi-user environment.
    1. Type your username for the website for __User Name__.
    1. If this is a new account, click __Generate__ to create a strong password for the site. Otherwise, use the existing password for the website.
