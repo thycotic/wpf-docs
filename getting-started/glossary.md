@@ -21,7 +21,7 @@ When looking in a browser this is represented by the following:
 | ----- | ----- | ----- |
 | Logged Out | (In top right corner) | ![images/image4.png](images/image4.png) |
 | Logged In  | (In top right corner) | ![images/image5.png](images/image5.png) |
-| Application in Browser | | ![images/image6.png](images/image6.png) |
+| Application in Browser (Settings Menu) | | ![images/image6.png](images/image6.png) |
 | Item on Extensions / Add-On page | Chrome | ![images/image7.png](images/image7.png) |
 |  | Firefox  | ![images/image8.png](images/image8.png) |
 |  | Edge (chromium version) | ![images/image9.png](images/image9.png) |
@@ -50,6 +50,8 @@ When looking in a browser this is represented by the following:
 This is the Clipboard Utility that was available with previous versions of
 Secret Server. The options and functionality of this extension have NOT be added
 into the NEW Web Password Filler (as of Feb 28, 2020).
+
+Also refer to [June 2020 - Bulletins and Technical Notes](https://docs.thycotic.com/bulletins/current/2020-june).
 
 It is typically referred to as:
 
