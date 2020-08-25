@@ -21,7 +21,7 @@ When a user is logged into a website using a secret and session recording is ena
 
 >**Note**: That as soon as a URL is accessed for a website and secret with session recording enabled, session recording will capture everything the user does, even if the user changes a password for that secret.
 
-## Using RegEx in WPF
+### Using RegEx in WPF
 
 1. To add a new secret via WPF, select a Secret Server template that has the RegEx field.
 
@@ -34,7 +34,7 @@ When a user is logged into a website using a secret and session recording is ena
    In the field __OtherUrls__,  enter any other URL for which session recording should enabled, in the event that the user is redirected to those URLs.  
 1. Click __Add__.
 
-## Setup in Secret Server
+### Setup in Secret Server
 
 1. Sign into Secret Server and navigate to __Admin | Secret Templates__.
 
@@ -55,3 +55,15 @@ When a user is logged into a website using a secret and session recording is ena
    1. Click __Save__.
 
 The template is now ready to be used in WPF.
+
+## Functional Updates/Improvements in WPF 2.0.2
+
+If you have session recording enabled for two secrets that contain the same primary or secondary domain (e.g. microsoftonline.com) and the same host name (e.g. microsoftonline.com) AND both secrets are used, WPF will close the first session when the second session is selected, closing the tabs associated with the first secret.  
+This is expected behavior and done to ensure that we only record sessions associated with secrets that require session recording. Sites like _microsoftonline_ only allow one login / active credential at a time.
+
+If you have session recording enabled for two secrets that do not contain a primary / secondary domain (e.g. .net, .com, .co.in) address, both secrets will be recorded independently.  
+For instance red.local.something is not the same as blue.local.something because “something” is neither a primary domain or secondary domain identifier.
+
+IP Addresses are now treated as an entirely unique address  (e.g. 10.0.0.61 is not the same as 10.0.0.51) and will be recorded independently.
+
+>**Note**: WPF does session recording for the account that was used to login to the Windows Admin Center directly, but WPF CANNOT record the RDP sessions that is logged into after that. this is due to the main browser window still looking at the Windows Admin Center URL not the RDP window that is nested inside the browser page.
