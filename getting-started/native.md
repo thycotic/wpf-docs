@@ -74,13 +74,15 @@ The Thycotic Web Password Filler is an “inclusive” extension. Any website th
 
 To exclude all sites, a wild card can be used (`https://*` and\or `http://*`) and then simply add the sites where secrets are available (<https://MyCompanySite.com/login.aspx>) to the exclusion exception list.
 
-## _Settings.json_ Format
+>**Note**: Only the “Exclude” section accepts a wild card. The “ExcludeException” must be the exact URL without a query string.
+
+## Settings.json Format
 
 The _settings.json_ is a json file. There are many online validators to ensure that the json is formatted correctly and we recommend that you validate your json prior to deployment.
 
 Here is an example _settings.json_ file that sets the Secret Server URL to `<https://SomeURL/SecretServer>`, the domain to “local” and enables all available options that are provided with the Thycotic Web Password Filler as well as hides the configuration and settings pages from the end users.
 
-```
+```json
 {
 
   "chromeExtensionId": "mfpddejbpnbjkjoaicfedaljnfeollkh",
@@ -98,23 +100,43 @@ Here is an example _settings.json_ file that sets the Secret Server URL to `<htt
   "SettingHideReadOnlyFolders": true,
   "SettingEnableAutoPopulate": true,
   "Exclude": [
-"\*",
-
-    "http://endoftheinternet.com",
-
-    "<https://www.MyCompanySite.com>",
-
-"https://live.com/"
-
-  ],
-
+     "http://*",
+     "http://endoftheinternet.com",
+     "https://www.MyCompanySite.com",
+     "https://live.com/"
+    ],
   "ExcludeException": [
-
-    "https:// MyCompanySite.com/Login.html",
-
-    "https://login.live.com/login.srf"
-
-  ]
-
+     "https:// MyCompanySite.com/Login.html",
+     "https://login.live.com/login.srf"
+    ]
 }
 ```
+
+### Error Messages
+
+* The following error message indicates that there are missing elements in the settings.json. 
+
+   ```bash
+   There are elements missing from settings.json. Review the documentation and update setting.json with the missing attributes.
+   ```
+
+   Review the _settings.json_ format and ensure all elements are provided and the json is well formatted.
+* The following message indicates that the setting “EnableForAllUsers” is set to true; however, the user attempting to register the Thycotic Native Messaging handler does not have administrator permissions and cannot update or create the hkey local machine registry key required for browser registration.
+
+   ```bash
+   This application must be run as an administrator when registering for All Users
+   ```
+
+* The following error message indicates that he ThycoticMessagingHost.exe was executed without the required command line option.
+
+   ```bash
+   To register the native messaging host, run cmd.exe ThycoticMessagingHost.exe –register 
+   To unregister the native messaging host, run cmd.exe ThycoticMessagingHost.exe --unregister
+   Press any key to exit
+   ```
+
+* The following message indicates that only `-–register` and `-–unregister` are valid command line options.
+
+   ```bash
+   Incorrect command line. Review the documentation to register or unregister this application.
+   ```
