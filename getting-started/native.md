@@ -8,7 +8,7 @@ The Thycotic Native message handler consists of a single executable and a config
 
 ## Does the Web Password Filler Require the Thycotic Native Message Handler?
 
-No, the Thycotic Web Password Filler can still run normally without the Thycotic Native Message Handler, however the end user will be required to supply the Secret Server URL and modify any settings to meet their needs. Basically to use an exclusion list with Web Password Filler, the Native Message Handler is required.
+No, the Thycotic Web Password Filler can still run normally without the Thycotic Native Message Handler, however the end user will be required to supply the Secret Server URL and modify any settings to meet their needs. To use an exclusion list with Web Password Filler, the Native Message Handler is required.
 
 ## Installing the Thycotic Native Message Handler
 
