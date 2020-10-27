@@ -49,34 +49,14 @@ For example, `HKEY_CURRENT_USER\Software\Google\Chrome\NativeMessagingHosts\com.
 
 To disable or remove the Thycotic Native Message Handler, use the `–unregister` option (for example `C:\Program Files\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --unregister`). Once unregistered, the Thycotic Native Message Handler can no longer communicate with the Thycotic Web Password Filler.
 
-## Configuration options
+## Configuration Options
 
 The settings can be managed through the Thycotic Native Message handler by modifying and deploying a _settings.json_ file. The file is read by the Thycotic Native Message Handler and on request from the Thycotic Web Password Filler, passes the information to the Thycotic Web Password Filler. Once the Thycotic
 Web Password Filler has the information, the Thycotic Web Password Filler updates the local storage with the new settings and configuration.
 
->**Note**: Aside from being able to manage the Thycotic Web Password Filler settings, the Thycotic Native Message handler provides a more robust method of storing the settings that are not impacted when the browse cache is deleted.
+>**Note**: Aside from being able to manage the Thycotic Web Password Filler settings, the Thycotic Native Message handler provides a more robust method of storing the settings that are not impacted when the browser cache is deleted.
 
-Each setting on the settings page can be set using “true” or “false” in the _settings.json_.
-
-![](images/settings.png "Settings tab")
-
-The Secret Server URL and Domain can be set by including strings (text wrapped up in quotations).
-
-![](images/config.png "Configuration tab")
-
-Additionally, you can choose to hide these pages from the end user so that the settings and configuration options cannot be changed.
-
-![](images/login.png "Hide Settings and Configuration from the Login dialog")
-
-## Site Exclusions and Exceptions
-
-The Thycotic Web Password Filler is an “inclusive” extension. Any website that contains a username and password has the potential to have a secret retrieved from or stored in Secret Server. However, some sites are simple web forms that contain user name, password and a variety of other field types. Registration forms for instance would not require interaction or population of the username and password from the Thycotic Web Password Filler. The Thycotic Native Message handler allows you to add exclusions as well as exclusion exceptions so those sites you do not want the Thycotic Web Password Filler to interact with will be ignored. Add exceptions for any site you wish the Thycotic Web Password Filler to ignore. If there is an exception (e.g. To login to an application you want the Thycotic Web Password Filler to retrieve a secret for the login page, however you would like the Web Password filler to ignore every other page for that same site), add the specific page URL to the exclusion exception list.
-
-To exclude all sites, a wild card can be used (`https://*` and\or `http://*`) and then simply add the sites where secrets are available (<https://MyCompanySite.com/login.aspx>) to the exclusion exception list.
-
->**Note**: Only the “Exclude” section accepts a wild card. The “ExcludeException” must be the exact URL without a query string.
-
-## Settings.json Format
+### Settings.json Format
 
 The _settings.json_ is a json file. There are many online validators to ensure that the json is formatted correctly and we recommend that you validate your json prior to deployment.
 
@@ -111,6 +91,28 @@ Here is an example _settings.json_ file that sets the Secret Server URL to `<htt
     ]
 }
 ```
+
+### Site Exclusions and Exceptions
+
+The Thycotic Web Password Filler is an “inclusive” extension. Any website that contains a username and password has the potential to have a secret retrieved from or stored in Secret Server. However, some sites are simple web forms that contain user name, password and a variety of other field types. Registration forms for instance would not require interaction or population of the username and password from the Thycotic Web Password Filler. The Thycotic Native Message handler allows you to add exclusions as well as exclusion exceptions so those sites you do not want the Thycotic Web Password Filler to interact with will be ignored. Add exceptions for any site you wish the Thycotic Web Password Filler to ignore. For example, to login to an application you want the Thycotic Web Password Filler to retrieve a secret for the login page, however you would like the Web Password filler to ignore every other page for that same site, add the specific page URL to the exclusion exception list.
+
+To exclude all sites, a wild card can be used (`https://*` and\or `http://*`) and then simply add the sites where secrets are available (<https://MyCompanySite.com/login.aspx>) to the exclusion exception list.
+
+>**Note**: Only the “Exclude” section accepts a wild card. The “ExcludeException” must be the exact URL without a query string.
+
+### UI Behavior Based on Settings
+
+Each setting on the settings page can be set using “true” or “false” in the _settings.json_.
+
+![](images/settings.png "Settings tab")
+
+The Secret Server URL and Domain can be set by including strings (text wrapped up in quotations).
+
+![](images/config.png "Configuration tab")
+
+Additionally, you can choose to hide these pages from the end user so that the settings and configuration options cannot be changed.
+
+![](images/login.png "Hide Settings and Configuration from the Login dialog")
 
 ### Error Messages
 
