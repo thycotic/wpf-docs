@@ -3,7 +3,7 @@
 [priority]: # (15)
 # Thycotic Web Password Filler Native Messaging Handler
 
-Native messaging enables a browser extension to exchange messages with a native application that is installed on the user's computer. The Thycotic Native Messaging Handler helps provide the Settings and Configuration options for the Web Password Filler to the web browser extension, with values that are determined by an Administrator. The Native Messaging Handler then deploys the determined set values to the Web Password Filler without needing additional access over the web.
+Native messaging enables a browser extension to exchange messages with a native application that is installed on the user's computer. The Thycotic Native Messaging Handler helps provide the Settings and Configuration options for the Web Password Filler to the web browser extension, with values that are determined by an Administrator. The Native Messaging Handler then deploys the determined set of values to the Web Password Filler without needing additional access over the web.
 The Thycotic Native message handler consists of a single executable and a configuration file. Each time a user’s browser is launched, the Thycotic Native Message Handler silently communicates with the Thycotic Web Password Filler to establish the default values for configuration and Settings. Additionally, before the Thycotic Web Password Filler attempts to retrieve any secrets associated with a URL, an exclusion list can be added, instructing the Thycotic Web Password Filler to not retrieve, populate or save secrets unless a specific page is active.
 
 ## Does the Web Password Filler Require the Thycotic Native Message Handler?
@@ -31,10 +31,10 @@ Additional information regarding Native Messaging can be found at
 
 ### Installation
 
-To install the Thycotic Native Message Handler on a user’s computer, copy the ThycoticMessagingHost.exe and a _settings.json_ file into a directory that is accessible (read access) to the end user (e.g. `C:\Program Files\Thycotic\Web Password Filler\`)
+To install the Thycotic Native Message Handler on a user’s computer, copy the ThycoticMessagingHost.exe and a _settings.json_ file into a directory that is accessible (read access) to the end user, e.g. `C:\Program Files\Thycotic\Web Password Filler\`.
 
 Once the ThycoticMessagingHost.exe and a _settings.json_ file are copied to the user’s machine, you must register the ThycoticMessagingHost.exe with the browsers. To do this run ThycoticMessagingHost.exe with a `--register` command line option. This MUST be called before the Native Messaging handler will
-interact with the Thycotic Web Password filler. Example (from a command window `C:\Program Files\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --register`)
+interact with the Thycotic Web Password Filler. Example, (from a command window `C:\Program Files\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --register`.
 
 If you manually add the extension to the browser instead of getting it from the browser store, the extension ID changes. In that case, you __MUST__ update the _settings.json_ to reflect the new extension ID. Whenever you change the extension ID, you must run the `-–register` command line option again before the extension will be able to communicate to the native messaging host. Refer to the _settings.json_ example at the end of this topic.
 
@@ -47,7 +47,7 @@ For example, `HKEY_CURRENT_USER\Software\Google\Chrome\NativeMessagingHosts\com.
 
 ### Uninstalling the Thycotic Native Message Handler
 
-To disable or remove the Thycotic Native Message Handler, use the `–unregister` option (for example `C:\Program Files\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --unregister`). Once unregistered, the Thycotic Native Message Handler can no longer communicate with the Thycotic Web Password Filler.
+To disable or remove the Thycotic Native Message Handler, use the `–unregister` option, for example `C:\Program Files\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --unregister`. Once unregistered, the Thycotic Native Message Handler can no longer communicate with the Thycotic Web Password Filler.
 
 ## Configuration Options
 
