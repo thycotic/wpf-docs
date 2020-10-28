@@ -12,6 +12,10 @@ No, the Thycotic Web Password Filler can still run normally without the Thycotic
 
 ## Installing the Thycotic Native Message Handler
 
+## Download Location
+
+Download the Web Password Filler installer [here](https://thy.center/wpf/link/MessingHostInstaller).
+
 ### Requirements
 
 * .NET version 4.5.2
@@ -67,19 +71,19 @@ Here is an example _settings.json_ file that sets the Secret Server URL to `<htt
 
   "chromeExtensionId": "mfpddejbpnbjkjoaicfedaljnfeollkh",
   "edgeExtensionId": "kjldmpkefedgljefehmmfifbhnjngmbh",
-  "operaExtensionId": "bpknpjofdmgfiiodcbdkdgannchkdmep",
-  "firefoxExtensionId": "dd1e31d5-3623-45cb-b1ad-64074d36b360\@thycotic.com",
-  "EnableForAllUsers": true,
+  "operaExtensionId": "beepinocelldcfagolbdjnmoecmbojkn",
+  "firefoxExtensionId": "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com",
   "ConfigSSUrl": "https://SomeURL/SecretServer",
   "ConfigDomain": "local",
-  "HideConfigPage": true,
-  "HideSettingPage": true,
-  "SettingUserSSLogin": true,
-  "SettingPrompToSave": true,
-  "SettingShowPopup": true,
-  "SettingHideReadOnlyFolders": true,
-  "SettingEnableAutoPopulate": true,
-  "Exclude": [
+  "HideConfigPage": false,
+  "HideSettingPage": false,
+  "SettingUserSSLogin": false,
+  "SettingPrompToSave": true,
+  "SettingShowPopup": true,
+  "SettingHideReadOnlyFolders": false,
+  "SettingEnableAutoPopulate": true,
+  "EnableForAllUsers": true,
+"Exclude": [
      "http://*",
      "http://endoftheinternet.com",
      "https://www.MyCompanySite.com",
@@ -92,11 +96,31 @@ Here is an example _settings.json_ file that sets the Secret Server URL to `<htt
 }
 ```
 
+__Where__:
+
+| Parameter | Default | Description |
+| ----- | ----- | ----- |
+| chromeExtensionID | "mfpddejbpnbjkjoaicfedaljnfeollkh" | This is the ID required for the Chrome browser registration. |
+| edgeExtensionId | "kjldmpkefedgljefehmmfifbhnjngmbh" | This is the ID required for the Edge browser registration. |
+| operaExtensionId | "beepinocelldcfagolbdjnmoecmbojkn" | This is the ID required for the Opera browser registration. |
+| firefoxExtensionId | "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com" | This is the ID required for the Firefox browser registration. |
+| ConfigSSUrl | "https://SomeURL/SecretServer" | This is the URL for your Secret Server instance. |
+| ConfigDomain | "local" | This is the domain identification either local or your corporate network domain. |
+| HideConfigPage | false | Boolean that controls if the Configuration tab is visible or not. |
+| HideSettingPage | false | Boolean that controls if the Settings tab is visible or not. |
+| SettingUserSSLogin | false | Boolean that sets the checkbox to enable the Secret Server Login option. |
+| SettingPrompToSave | true | Boolean that sets the checkbox to enable the Prompt to Save option. |
+| SettingHideReadOnlyFolders | false | Boolean that sets the checkbox to enable the Hide Read Only Folder option. |
+| SettingEnableAutoPopulate | true | Boolean that sets the checkbox to enable the Auto Populate option for secrets and passwords. |
+| EnableForAllUsers | true | Boolean specifying if the Native Message Handler is available under the local user context only or made available for all users. If set to true, it allows all users on the machine to access the settings.json file as long as it's in a shared location. If set to "false" it only applies to the current logged in user no matter where the file is stored. Changes impacting the registry keys also require admin permissions if EnableForAllUsers is set to true. |
+| Exclude | [list] | Refer to [Site Exclusions and Exceptions](#site_exclusions_and_exceptions) below. Accepts wildcards. |
+| ExcludeException | [list] | Refer to [Site Exclusions and Exceptions](#site_exclusions_and_exceptions) below. Does NOT accept wildcards. |
+
 ### Site Exclusions and Exceptions
 
 The Thycotic Web Password Filler is an “inclusive” extension. Any website that contains a username and password has the potential to have a secret retrieved from or stored in Secret Server. However, some sites are simple web forms that contain user name, password and a variety of other field types. Registration forms for instance would not require interaction or population of the username and password from the Thycotic Web Password Filler. The Thycotic Native Message handler allows you to add exclusions as well as exclusion exceptions so those sites you do not want the Thycotic Web Password Filler to interact with will be ignored. Add exceptions for any site you wish the Thycotic Web Password Filler to ignore. For example, to login to an application you want the Thycotic Web Password Filler to retrieve a secret for the login page, however you would like the Web Password filler to ignore every other page for that same site, add the specific page URL to the exclusion exception list.
 
-To exclude all sites, a wild card can be used (`https://*` and\or `http://*`) and then simply add the sites where secrets are available (<https://MyCompanySite.com/login.aspx>) to the exclusion exception list.
+To exclude all sites, a wild card can be used (`https://*` and/or `http://*`) and then simply add the sites where secrets are available (<https://MyCompanySite.com/login.aspx>) to the exclusion exception list.
 
 >**Note**: Only the “Exclude” section accepts a wild card. The “ExcludeException” must be the exact URL without a query string.
 
@@ -123,7 +147,7 @@ Additionally, you can choose to hide these pages from the end user so that the s
    ```
 
    Review the _settings.json_ format and ensure all elements are provided and the json is well formatted.
-* The following message indicates that the setting “EnableForAllUsers” is set to true; however, the user attempting to register the Thycotic Native Messaging handler does not have administrator permissions and cannot update or create the hkey local machine registry key required for browser registration.
+* The following message indicates that the setting “EnableForAllUsers” is set to true; however, the user attempting to register the Thycotic Native Messaging Handler does not have administrator permissions and cannot update or create the hkey local machine registry key required for browser registration.
 
    ```bash
    This application must be run as an administrator when registering for All Users
@@ -132,7 +156,7 @@ Additionally, you can choose to hide these pages from the end user so that the s
 * The following error message indicates that he ThycoticMessagingHost.exe was executed without the required command line option.
 
    ```bash
-   To register the native messaging host, run cmd.exe ThycoticMessagingHost.exe –register 
+   To register the native messaging host, run cmd.exe ThycoticMessagingHost.exe –register
    To unregister the native messaging host, run cmd.exe ThycoticMessagingHost.exe --unregister
    Press any key to exit
    ```
