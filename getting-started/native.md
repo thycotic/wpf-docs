@@ -108,7 +108,7 @@ __Where__:
 | SettingPrompToSave | true | Boolean that sets the checkbox to enable the Prompt to Save option. |
 | SettingHideReadOnlyFolders | false | Boolean that sets the checkbox to enable the Hide Read Only Folder option. |
 | SettingEnableAutoPopulate | true | Boolean that sets the checkbox to enable the Auto Populate option for secrets and passwords. |
-| EnableForAllUsers | true | Boolean that sets the checkbox to enable the For All Users option. If this is not enabled, users won't have permissions to register the browser extensions, if they are not a local administrator. |
+| EnableForAllUsers | true | Boolean specifying if the Native Message Handler is available under the local user context only or made available for all users. If set to true, it allows all users on the machine to access the settings.json file as long as it's in a shared location. If set to "false" it only applies to the current logged in user no matter where the file is stored. Changes impacting the registry keys also require admin permissions if EnableForAllUsers is set to true. |
 | Exclude | [list] | Refer to [Site Exclusions and Exceptions](#site_exclusions_and_exceptions) below. Accepts wildcards. |
 | ExcludeException | [list] | Refer to [Site Exclusions and Exceptions](#site_exclusions_and_exceptions) below. Does NOT accept wildcards. |
 
