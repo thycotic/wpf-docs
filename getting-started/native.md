@@ -12,6 +12,10 @@ No, the Thycotic Web Password Filler can still run normally without the Thycotic
 
 ## Installing the Thycotic Native Message Handler
 
+## Download Location
+
+Download the Web Password Filler installer [here](https://thy.center/wpf/link/MessingHostInstaller).
+
 ### Requirements
 
 * .NET version 4.5.2
@@ -67,18 +71,18 @@ Here is an example _settings.json_ file that sets the Secret Server URL to `<htt
 
   "chromeExtensionId": "mfpddejbpnbjkjoaicfedaljnfeollkh",
   "edgeExtensionId": "kjldmpkefedgljefehmmfifbhnjngmbh",
-  "operaExtensionId": "bpknpjofdmgfiiodcbdkdgannchkdmep",
+  "operaExtensionId": "beepinocelldcfagolbdjnmoecmbojkn",
   "firefoxExtensionId": "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com",
   "ConfigSSUrl": "https://SomeURL/SecretServer",
   "ConfigDomain": "local",
-  "HideConfigPage": false,
-  "HideSettingPage": false,
-  "SettingUserSSLogin": false,
-  "SettingPrompToSave": true,
-  "SettingShowPopup": true,
-  "SettingHideReadOnlyFolders": false,
-  "SettingEnableAutoPopulate": true,
-  "EnableForAllUsers": true,
+  "HideConfigPage": false,
+  "HideSettingPage": false,
+  "SettingUserSSLogin": false,
+  "SettingPrompToSave": true,
+  "SettingShowPopup": true,
+  "SettingHideReadOnlyFolders": false,
+  "SettingEnableAutoPopulate": true,
+  "EnableForAllUsers": true,
 "Exclude": [
      "http://*",
      "http://endoftheinternet.com",
@@ -98,7 +102,7 @@ __Where__:
 | ----- | ----- | ----- |
 | chromeExtensionID | "mfpddejbpnbjkjoaicfedaljnfeollkh" | This is the ID required for the Chrome browser registration. |
 | edgeExtensionId | "kjldmpkefedgljefehmmfifbhnjngmbh" | This is the ID required for the Edge browser registration. |
-| operaExtensionId | "bpknpjofdmgfiiodcbdkdgannchkdmep" | This is the ID required for the Opera browser registration. |
+| operaExtensionId | "beepinocelldcfagolbdjnmoecmbojkn" | This is the ID required for the Opera browser registration. |
 | firefoxExtensionId | "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com" | This is the ID required for the Firefox browser registration. |
 | ConfigSSUrl | "https://SomeURL/SecretServer" | This is the URL for your Secret Server instance. |
 | ConfigDomain | "local" | This is the domain identification either local or your corporate network domain. |
