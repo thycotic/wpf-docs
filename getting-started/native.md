@@ -12,9 +12,9 @@ No, the Thycotic Web Password Filler can still run normally without the Thycotic
 
 ## Installing the Thycotic Native Message Handler
 
-## Download Location
+### Download Location
 
-Download the Web Password Filler installer [here](https://thy.center/wpf/link/MessingHostInstaller).
+Download the Native Message Handler installer [here](https://thy.center/wpf/link/MessingHostInstaller).
 
 ### Requirements
 
