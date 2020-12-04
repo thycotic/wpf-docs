@@ -1,4 +1,4 @@
-[title]: # (Icognitor Support)
+[title]: # (Incognito Support)
 [tags]: # (WPF)
 [priority]: # (11)
 # Incognito Support
