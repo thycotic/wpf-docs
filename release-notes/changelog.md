@@ -5,6 +5,10 @@
 
 This topic provides a chronological list of documentation changes. Minor content alterations are not tracked.
 
+## December 2020
+
+* [Release Notes](../release-notes/2.0.4.md)
+
 ## October 2020
 
 2.0.3 Release Updates
