@@ -1,17 +1,30 @@
 [title]: # (Session Recording)
 [tags]: # (WPF)
 [priority]: # (10)
+
 # Session Recording
 
-Session recording for web sessions is supported in the Web Password Filler. In order for a web session to be recorded the Secret (in Secret Server) must have the Session Recording option enabled in the Security settings.
+Session Recording for web sessions is supported in the Web Password Filler. For a web session to be recorded, the Secret (in Secret Server) must have Session Recording enabled in the Security settings.
 
-When you launch a Secret that has session recording enabled, or you navigate to a web page and select a Secret that has session recording enable, the recording will start as soon as the credentials are filled into the login fields (Username/Password, etc.).
+When you launch a Secret that has Session Recording enabled, or when you navigate to a web page and select a Secret that has Session Recording enabled, the recording begins as soon as the credentials are filled into the login fields (Username/Password, etc.).
 
-Once the Session recording starts you should see a notification message pop-up on the upper right-hand side of the browser window indicating that recording has begun, and on sites that allow it, the logo on the tab will alternate between the site logo and the recording icon.
+Once the session recording starts you should see a notification message pop up at the upper right side of the browser window indicating that recording has begun. On sites that allow it, the logo on the tab will alternate between the site logo and the recording icon.
 
->**Important**: When recording web sessions, the recording will be limited to the exact match for the domain/subdomain for the URL (i.e. everything between `http(s)://` and the next `/`. Anything not included in the exact URL will not be recorded. For example, if a Secret with session recording has the URL value set to `https://thycotic.company.com/` then only browser tabs opened for that URL will be recorded. If the login page then redirects to `https://company.com` then the session is no longer be recorded since the subdomain is now different.
+When recording web sessions, the recording will be limited to the exact match for the domain/subdomain for the URL, which is everything between `http(s)://` and the next `/`. Anything *not* included in the exact URL will not be recorded. For example, if a Secret with session recording has the URL value set to `https://thycotic.company.com/` then only the browser tabs opened for that URL will be recorded. If the login page then redirects to `https://company.com` then the session will no longer be recorded since the subdomain has changed.
 
-If you want to capture other sites that have a different subdomain that launch from the same Secret, then you need to configure the Secret to include the other URLs using RegEx.
+Likewise, you might be recording a session in a tab opened to `https://thycotic.company.com` and then open a second tab to `https://delta.company.com`, which happens to use the same domain as the first tab (`company.com`). When the second tab opens it becomes the tab "in focus" and the session recording continues on the second tab. If you wish to keep recording on the original tab, we recommend opening the second tab in an incognito window or in a separate browser session.
+
+If you have session recording enabled for two Secrets that contain the same primary or secondary domain such as `microsoftonline.com` and the same host name (`microsoftonline.com`) AND both secrets are being used, when the second session is selected, WPF will close the first session and tabs associated with the first Secret.
+
+This is expected behavior, implemented to ensure that the only sessions recorded are those associated with Secrets that require session recording. Sites like microsoftonline allow only one login / active credential at a time. If you have session recording enabled for two secrets that do not contain a primary / secondary domain (such as .net, .com, .co) address, both sessions will be recorded independently. For instance red.local.something is not the same as blue.local.something because “something” is neither a primary domain nor secondary domain identifier.
+
+IP Addresses are now treated as an entirely unique address (e.g. 10.0.0.61 is not the same as 10.0.0.51) and will be recorded independently.
+
+## Session Recording Limits
+
+The default maximum recording time for each session (start to end) regardless of how many tabs are open, is two hours. If a user starts session recording on red.thycotic.com, and then opens a tab for blue.thycotic.com, session recording will continue on blue.thycotic.com when it is in focus. By default, session recording will stop after two hours, and both tabs will close. This session recording limit is now configurable via the Native Message Host and can be extended to a maximum of eight hours.
+
+If you want to capture other sites with different subdomains that launch from the same Secret, you must use RegEx to configure the Secret to include the other URLs.
 
 ## RegEx
 

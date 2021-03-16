@@ -1,20 +1,23 @@
-[title]: # (Native Message Handling)
+[title]: # (Native Messaging Host)
 [tags]: # (WPF)
 [priority]: # (15)
-# Thycotic Web Password Filler Native Messaging Handler
 
-Native messaging enables a browser extension to exchange messages with a native application that is installed on the user's computer. The Thycotic Native Messaging Handler helps provide the Settings and Configuration options for the Web Password Filler to the web browser extension, with values that are determined by an Administrator. The Native Messaging Handler then deploys the determined set of values to the Web Password Filler without needing additional access over the web.
-The Thycotic Native message handler consists of a single executable and a configuration file. Each time a user’s browser is launched, the Thycotic Native Message Handler silently communicates with the Thycotic Web Password Filler to establish the default values for configuration and Settings. Additionally, before the Thycotic Web Password Filler attempts to retrieve any secrets associated with a URL, an exclusion list can be added, instructing the Thycotic Web Password Filler to not retrieve, populate or save secrets unless a specific page is active.
+# Native Messaging Host
 
-## Does the Web Password Filler Require the Thycotic Native Message Handler?
+The Thycotic Native Messaging Host is installed on a user’s computer and consists of one executable file and one configuration file. Each time a user’s browser is launched, the Native Messaging Host silently sends default configurations and settings to the Web Password Filler.
 
-No, the Thycotic Web Password Filler can still run normally without the Thycotic Native Message Handler, however the end user will be required to supply the Secret Server URL and modify any settings to meet their needs. To use an exclusion list with Web Password Filler, the Native Message Handler is required.
+Before the Web Password Filler attempts to retrieve any secrets associated with a URL, an exclusion list can prevent the Web Password Filler from retrieving, populating, or saving Secrets unless a specified page is active.
 
-## Installing the Thycotic Native Message Handler
+
+## Does the Web Password Filler Require the Thycotic Native Message Host?
+
+No, the Web Password Filler can still run normally without the Native Message Host, however the end user will be required to supply the Secret Server URL and modify any settings to meet their needs. To use an exclusion list with Web Password Filler, the Native Message Host is required.
+
+## Installing the Thycotic Native Message Host
 
 ### Download Location
 
-Download the Native Message Handler installer [here](https://thy.center/wpf/link/MessingHostInstaller).
+Download the Native Message Host installer [here](https://thy.center/wpf/link/MessingHostInstaller).
 
 ### Requirements
 
@@ -35,10 +38,12 @@ Additional information regarding Native Messaging can be found at
 
 ### Installation
 
-To install the Thycotic Native Message Handler on a user’s computer, copy the ThycoticMessagingHost.exe and a _settings.json_ file into a directory that is accessible (read access) to the end user, e.g. `C:\Program Files\Thycotic\Web Password Filler\`.
+To install the Thycotic Native Message Handler on a user’s computer, copy the ThycoticMessagingHost.exe and a _settings.json_ file into a directory that is accessible (read access) to the end user, e.g. `C:\Thycotic\Web Password Filler\`.
 
 Once the ThycoticMessagingHost.exe and a _settings.json_ file are copied to the user’s machine, you must register the ThycoticMessagingHost.exe with the browsers. To do this run ThycoticMessagingHost.exe with a `--register` command line option. This MUST be called before the Native Messaging handler will
-interact with the Thycotic Web Password Filler. Example, (from a command window `C:\Program Files\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --register`.
+interact with the Thycotic Web Password Filler. Example, (from a command window `C:\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --register`.
+
+>**Note** Once you have successfully registered the Thycotic Messaging Host, the configuration file will be checked for updates automatically each time your browser launches. You do not have to unregister and re-register each time you make a change to the configuration file. 
 
 If you manually add the extension to the browser instead of getting it from the browser store, the extension ID changes. In that case, you __MUST__ update the _settings.json_ to reflect the new extension ID. Whenever you change the extension ID, you must run the `-–register` command line option again before the extension will be able to communicate to the native messaging host. Refer to the _settings.json_ example at the end of this topic.
 
