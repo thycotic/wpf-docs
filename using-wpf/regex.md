@@ -22,7 +22,7 @@ IP Addresses are now treated as an entirely unique address (e.g. 10.0.0.61 is no
 
 ## Session Recording Limits
 
-The default maximum recording time for each session (start to end) regardless of how many tabs are open, is two hours. If a user starts session recording on red.thycotic.com, and then opens a tab for blue.thycotic.com, session recording will continue on blue.thycotic.com when it is in focus. By default, session recording will stop after two hours, and both tabs will close. This session recording limit is now configurable via the Native Message Host and can be extended to a maximum of eight hours.
+The default maximum recording time for each session (start to end) regardless of how many tabs are open, is two hours. If a user starts session recording on red.thycotic.com, and then opens a tab for blue.thycotic.com, session recording will continue on blue.thycotic.com when it is in focus. By default, session recording will stop after two hours, and both tabs will close. This session recording limit is now configurable via the Native Messaging Host and can be extended to a maximum of eight hours.
 
 If you want to capture other sites with different subdomains that launch from the same Secret, you must use RegEx to configure the Secret to include the other URLs.
 

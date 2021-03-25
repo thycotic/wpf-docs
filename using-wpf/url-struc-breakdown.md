@@ -10,7 +10,7 @@ A Universal Resource Locator (URL) is typically composed of several components a
 
 The *scheme* identifies the protocol to be used to access the resource on the Internet. It can be HTTP (without SSL) or HTTPS (with SSL).
 
-**WPF treats different schemas as different URLs**
+**WPF treats different schemes as different URLs**
 
 For example `http://company.com` is *not* the same as `https://company.com`. 
 
@@ -61,9 +61,9 @@ Name and value pairs are separated from each other by an ampersand (&);
 
 ## A web domain is not the same thing as a website
 
-The domain is read from right.** 
+The domain is read from **right** to left.
 
-For example when examining `www.company.com`: 
+For example when examining `www.company.com`:
 
 1. **.com** is the top-level domain
 1. **company.com** is the domain
