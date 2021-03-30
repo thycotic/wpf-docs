@@ -5,6 +5,10 @@
 
 This topic provides a chronological list of documentation changes. Minor content alterations are not tracked.
 
+## March 2021
+
+* [Release Notes](../release-notes/2.0.5.md)
+
 ## December 2020
 
 * [Release Notes](../release-notes/2.0.4.md)
@@ -14,7 +18,7 @@ This topic provides a chronological list of documentation changes. Minor content
 2.0.3 Release Updates
 
 * [Release Notes](../release-notes/2.0.3.md)
-* [Native Messaging Handler](../getting-started/native.md)
+* [Native Messaging Host](../getting-started/native.md)
 
 ## September 2020
 
