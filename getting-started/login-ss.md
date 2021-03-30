@@ -43,12 +43,7 @@ The __Login with Secret Server__ button allows you to log in to WPF using a redi
    ![image-20191205114940336](images/image-20191205114940336.png "WPF Login modal")
 
    If you already have enabled the __Use Secret Server to login__ option on the Settings tab, then the Login tab will show the __Login with Secret Server__ button.
-1. Click the __Login with Secret Server__ button. WPF opens a new tab for Secret Server in the browser, where you can log on.
-
-   >**Note**: After logging in to Secret Server, or if you were recently logged in, the __Generate token__ page should appear in your browser. Click __Generate Token__.
-   >
-   >![image-20191205152236928](images/image-20191205152236928.png "Generate Token page")
-   >You will then be logged on, and the browser tab with Secret Server will automatically close.
+1. Click the __Login with Secret Server__ button. WPF opens a new tab for Secret Server in the browser, where you can log into Secret Server. After logging into Secret Server, a token is automatically generated for you. A window opens briefly showing the Generate Token button being pushed automatically, then the window quickly closes.  
  
 <!-- 1. If you have two-factor authentication enabled in Secret Server (and your log on was authenticated), you are sent to the __Two Factor__ tab to complete the second authentication:
 
