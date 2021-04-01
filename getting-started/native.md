@@ -4,15 +4,17 @@
 
 # Native Messaging Host
 
-The Thycotic Native Messaging Host is installed on a user’s computer and consists of one executable file and one configuration file. Each time a user’s browser is launched, the Native Messaging Host silently sends default configurations and settings to the Web Password Filler.
+The Thycotic Native Messaging Host makes it easier to manage settings for the Thycotic Web Password Filler (WPF). it also provides a more robust method of storing the settings so they are not impacted when the browser cache is deleted.
 
-You can prevent WPF from functioning on specific URLs by adding those URLs to an exclusion list. For URLs on the exclusion list, WPF will not access Secrets nor will it fill/auto populate credentials or other information.
+Without the Native Messaging Host, the Web Password Filler runs normally, but the end user will be required to supply the Secret Server URL and to modify other settings to meet their needs.
 
-## Does the WPF Require the Thycotic Native Messaging Host?
+Native Messaging Host consists of one executable file and one configuration file installed on the user’s computer. Each time the user’s browser is launched, the Native Messaging Host silently sends default configurations and settings to the Web Password Filler.
 
-No, the Web Password Filler can still run normally without the Native Messaging Host, however the end user will be required to supply the Secret Server URL and to modify other settings to meet their needs. To use an exclusion list with Web Password Filler, the Native Messaging Host is required.
+Users can prevent Web Password Filler from functioning on specific URLs by adding those URLs to an exclusion list. Web Password Filler will not access Secrets for URLs on the exclusion list, nor will it fill/auto populate credentials or other information.
 
-## Installing the Thycotic Native Messaging Host
+>**Note:** To use an exclusion list with Web Password Filler, the Native Messaging Host is required.
+
+## Installing the Native Messaging Host
 
 ### Download Location
 
@@ -26,8 +28,8 @@ Download the Native Messaging Host installer [here](https://thy.center/wpf/link/
 ### Supported Browsers
 
 * Chrome
-* FireFox
 * Edge Chromium
+* FireFox
 * Opera
 
 Additional information regarding Native Messaging can be found at
@@ -37,66 +39,109 @@ Additional information regarding Native Messaging can be found at
 
 ### Installation
 
-To install the Thycotic Native Messaging Host on a user’s computer, copy the ThycoticMessagingHost.exe and a _settings.json_ file into a directory that is accessible (read access) to the end user, e.g. `C:\Thycotic\Web Password Filler\`.
+The user installs the Thycotic Native Messaging Host on their computer by copying the ThycoticMessagingHost.exe and _settings.json_ files into an accessible directory such as `C:\Thycotic\Web Password Filler\`.
 
-Once the ThycoticMessagingHost.exe and a _settings.json_ file are copied to the user’s machine, you must register the ThycoticMessagingHost.exe with the browsers. To do this run ThycoticMessagingHost.exe with a `--register` command line option. This MUST be called before the Native Messaging Host will
-interact with the Thycotic Web Password Filler. Example, (from a command window `C:\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --register`.
+### Registration
 
->**Note** Once you have successfully registered the Thycotic Messaging Host, the configuration file will be checked for updates automatically each time your browser launches. You do not have to unregister and re-register each time you make a change to the configuration file. 
+The user must then register the ThycoticMessagingHost.exe with the browsers by running ThycoticMessagingHost.exe with a `--register` command line option, for example, by entering `C:\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --register`into a command window. Native Messaging Host cannot interact with the Web Password Filler until this registration is completed.
 
-If you manually add the extension to the browser instead of getting it from the browser store, the extension ID changes. In that case, you __MUST__ update the _settings.json_ to reflect the new extension ID. Whenever you change the extension ID, you must run the `-–register` command line option again before the extension will be able to communicate to the native messaging host. Refer to the _settings.json_ example at the end of this topic.
+Once the user has successfully registered the Native Messaging Host, the configuration file will be checked for updates automatically each time the user launches their browser. The user does not have to unregister and re-register each time they make a change to the configuration file.
+
+>**Note** If the user manually adds the WPF extension to the browser instead of getting it from the browser store, the extension ID changes. In that case, the user __MUST__ update the _settings.json_ to reflect the new extension ID. Whenever the user changes the extension ID, they must run the `-–register` command line option again before the extension will be able to communicate with the Native Messaging Host. Refer to the _settings.json_ example below.
 
 Changing other options or settings in the _settings.json_ will automatically be reflected once the user launches their browser.
 
-During the registration process, the Thycotic Native Messaging Host will create three folders (Chrome, Edge, Firefox) which contain the “native messaging host configuration” information required by the browsers. Additionally, register entries are created for each browser in either the current user registry or the
-local machine registry.
+During the registration process, the Native Messaging Host creates a folder for each browser (Chrome, Edge, Firefox, and Opera) containing the “native messaging host configuration” information required by each browser. Additionally, registry entries are created for each browser in either the current user registry or the local machine registry.
 
-For example, `HKEY_CURRENT_USER\Software\Google\Chrome\NativeMessagingHosts\com.thycotic.wpf.host` with a default value that is the path to the “native messaging host configuration” file. If registering using the `EnableForAllUsers = true` option, you must run the registration as an administrator.
+For example, `HKEY_CURRENT_USER\Software\Google\Chrome\NativeMessagingHosts\com.thycotic.wpf.host` with a default value that is the path to the “native messaging host configuration” file. If registering using the `EnableForAllUsers = true` option, the user must run the registration as an administrator.
 
 ### Uninstalling the Thycotic Native Messaging Host
 
-To disable or remove the Thycotic Native Messaging Host, use the `–unregister` option, for example `C:\Program Files\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --unregister`. Once unregistered, the Thycotic Native Messaging Host can no longer communicate with the Thycotic Web Password Filler.
+To disable or remove the Native Messaging Host, use the `–unregister` option, for example `C:\Program Files\Thycotic\Web Password Filler\ThycoticMessagingHost.exe --unregister`. Once unregistered, the Native Messaging Host can no longer communicate with the Web Password Filler.
 
 ## Configuration Options
 
-The settings can be managed through the Thycotic Native Messaging Host by modifying and deploying a _settings.json_ file. The file is read by the Thycotic Native Messaging Host and on request from the Thycotic Web Password Filler, passes the information to the Thycotic Web Password Filler. Once the Thycotic
-Web Password Filler has the information, the Thycotic Web Password Filler updates the local storage with the new settings and configuration.
-
->**Note**: Aside from being able to manage the Thycotic Web Password Filler settings, the Thycotic Native Messaging Host provides a more robust method of storing the settings that are not impacted when the browser cache is deleted.
+Native Messaging Host facilitates the management of Web Password Filler settings through modification of a _settings.json_ file. Each time the user’s browser is launched, the Native Messaging Host reads the default configurations and settings in the json file and silently sends them to the Web Password Filler. The Web Password Filler then updates the local storage with the new settings and configurations.
 
 ### Settings.json Format
 
-The _settings.json_ is a json file. There are many online validators to ensure that the json is formatted correctly and we recommend that you validate your json prior to deployment.
+We recommend validating the _settings.json_ file prior to deployment to ensure that the json is formatted correctly. There are many free online tools for validating json files.
 
 Here is an example _settings.json_ file that sets the Secret Server URL to `<https://SomeURL/SecretServer>`, the domain to “local” and enables all available options that are provided with the Thycotic Web Password Filler as well as hides the configuration and settings pages from the end users.
 
 ```json
 {
-
-  "chromeExtensionId": "mfpddejbpnbjkjoaicfedaljnfeollkh",
-  "edgeExtensionId": "kjldmpkefedgljefehmmfifbhnjngmbh",
-  "operaExtensionId": "beepinocelldcfagolbdjnmoecmbojkn",
-  "firefoxExtensionId": "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com",
-  "ConfigSSUrl": "https://SomeURL/SecretServer",
-  "ConfigDomain": "local",
+  "chromeExtensionId": "mfpddejbpnbjkjoaicfedaljnfeollkh",
+  "edgeExtensionId": "kjldmpkefedgljefehmmfifbhnjngmbh",
+  "operaExtensionId": "eemnnadjdifcpkcnpalolohpepihhbbo",
+  "firefoxExtensionId": "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com",
+  "ConfigSSUrl": "https://SomeURL/SecretServer",
+  "ConfigDomain": "",
   "HideConfigPage": false,
   "HideSettingPage": false,
-  "SettingUserSSLogin": false,
+  "SettingUserSSLogin": true,
   "SettingPrompToSave": true,
   "SettingShowPopup": true,
-  "SettingHideReadOnlyFolders": false,
+  "SettingHideReadOnlyFolders": true,
   "SettingEnableAutoPopulate": true,
-  "EnableForAllUsers": true,
-"Exclude": [
-     "http://*",
-     "http://endoftheinternet.com",
-     "https://www.MyCompanySite.com",
-     "https://live.com/"
-    ],
-  "ExcludeException": [
-     "https:// MyCompanySite.com/Login.html",
-     "https://login.live.com/login.srf"
-    ]
+  "EnableForAllUsers": false,
+  "PopupDefaultPosition": true,
+  "ExactMatchUrl": false,
+  "maxSessionRecordingLimit": 120,
+  "Exclude": [ "http://*" ],
+  "ExcludeException": [],
+  "PerExtensionOverride": [
+    {
+      "id": "mfpddejbpnbjkjoaicfedaljnfeollkh",
+      "ConfigSSUrl": "https://SomeURL/SecretServer",
+      "ConfigDomain": "",
+      "HideConfigPage": true,
+      "HideSettingPage": false,
+      "SettingUserSSLogin": true,
+      "SettingPrompToSave": true,
+      "SettingShowPopup": true,
+      "SettingHideReadOnlyFolders": true,
+      "SettingEnableAutoPopulate": true,
+      "EnableForAllUsers": false,
+      "PopupDefaultPosition": false,
+      "ExactMatchUrl": true,
+      "maxSessionRecordingLimit": 120,
+      "Exclude": [
+         "http://*",
+         "http://endoftheinternet.com",
+         "https://www.MyCompanySite.com",
+         "https://live.com/"
+       ],
+      "ExcludeException": [
+         "https:// MyCompanySite.com/Login.html",
+         "https://login.live.com/login.srf"
+       ]
+    },
+    {
+      "id": "kjldmpkefedgljefehmmfifbhnjngmbh",
+      "ConfigSSUrl": "https://localhost/SecretServer/",
+      "ConfigDomain": "",
+      "HideConfigPage": false,
+      "HideSettingPage": false,
+      "SettingUserSSLogin": false,
+      "SettingPrompToSave": false,
+      "SettingShowPopup": false,
+      "SettingHideReadOnlyFolders": false,
+      "SettingEnableAutoPopulate": false,
+      "PopupDefaultPosition": false,
+      "ExactMatchUrl": false,
+      "maxSessionRecordingLimit": 120,
+      "Exclude": [ "http://*" ],
+      "ExcludeException": []
+    },
+    {
+      "id": "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com",
+	  "HideConfigPage": false
+    },
+    {
+      "id": "eemnnadjdifcpkcnpalolohpepihhbbo"
+    }
+  ]
 }
 ```
 
@@ -106,19 +151,23 @@ __Where__:
 | ----- | ----- | ----- |
 | chromeExtensionID | "mfpddejbpnbjkjoaicfedaljnfeollkh" | This is the ID required for the Chrome browser registration. |
 | edgeExtensionId | "kjldmpkefedgljefehmmfifbhnjngmbh" | This is the ID required for the Edge browser registration. |
-| operaExtensionId | "beepinocelldcfagolbdjnmoecmbojkn" | This is the ID required for the Opera browser registration. |
+| operaExtensionId | "eemnnadjdifcpkcnpalolohpepihhbbo" | This is the ID required for the Opera browser registration. |
 | firefoxExtensionId | "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com" | This is the ID required for the Firefox browser registration. |
 | ConfigSSUrl | "https://SomeURL/SecretServer" | This is the URL for your Secret Server instance. |
-| ConfigDomain | "local" | This is the domain identification either local or your corporate network domain. |
+| ConfigDomain | "" | This is the domain identification either local or your corporate network domain. |
 | HideConfigPage | false | Boolean that controls if the Configuration tab is visible or not. |
 | HideSettingPage | false | Boolean that controls if the Settings tab is visible or not. |
-| SettingUserSSLogin | false | Boolean that sets the checkbox to enable the Secret Server Login option. |
+| SettingUserSSLogin | true | Boolean that sets the checkbox to enable the Secret Server Login option. |
 | SettingPrompToSave | true | Boolean that sets the checkbox to enable the Prompt to Save option. |
-| SettingHideReadOnlyFolders | false | Boolean that sets the checkbox to enable the Hide Read Only Folder option. |
+| SettingHideReadOnlyFolders | true | Boolean that sets the checkbox to enable the Hide Read Only Folder option. |
 | SettingEnableAutoPopulate | true | Boolean that sets the checkbox to enable the Auto Populate option for secrets and passwords. |
-| EnableForAllUsers | true | Boolean specifying if the Native Messaging Host is available under the local user context only or made available for all users. If set to true, it allows all users on the machine to access the settings.json file as long as it's in a shared location. If set to "false" it only applies to the current logged in user no matter where the file is stored. Changes impacting the registry keys also require admin permissions if EnableForAllUsers is set to true. |
+| EnableForAllUsers | false | Boolean specifying if the Native Messaging Host is available under the local user context only or made available for all users. If set to true, it allows all users on the machine to access the settings.json file as long as it's in a shared location. If set to false it only applies to the current logged in user no matter where the file is stored. Changes impacting the registry keys also require admin permissions if EnableForAllUsers is set to true. |
+| PopupDefaultPosition | true  |  Boolean that positions the menu in the upper right corner of the screen. If false the popup appears below the credentials fields.
+| ExactMatchUrl | false  |  Boolean that configures WPF to recognize only exact URL matches
+| maxSessionRecordingLimit  |  120  |  The number of minutes allowed for a session recording. Default is 120 minutes and maximum allowed is 480 minutes.
 | Exclude | [list] | Refer to [Site Exclusions and Exceptions](#site_exclusions_and_exceptions) below. Accepts wildcards. |
 | ExcludeException | [list] | Refer to [Site Exclusions and Exceptions](#site_exclusions_and_exceptions) below. Does NOT accept wildcards. |
+| PerExtensionOverride | Contains a section for each browser type, with custom values for the 15 settings described in this table (ConfigSSUrl, ConfigDomain, HideConfigPage, etc.).  |  If a value in this section differs from the default value established at the top of the JSON file, the value here takes precedence for that browser, and overrides the default value.
 
 ### Site Exclusions and Exceptions
 
@@ -132,7 +181,7 @@ To exclude all sites, a wild card can be used (`https://*` and/or `http://*`) an
 
 Each setting on the settings page can be set using “true” or “false” in the _settings.json_.
 
-![](images/settings.png "Settings tab")
+![](images/settings2.png "Settings tab")
 
 The Secret Server URL and Domain can be set by including strings (text wrapped up in quotations).
 
