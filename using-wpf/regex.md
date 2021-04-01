@@ -22,7 +22,7 @@ IP Addresses are now treated as an entirely unique address (e.g. 10.0.0.61 is no
 
 ## Session Recording Limits
 
-The default maximum recording time for each session (start to end) regardless of how many tabs are open, is two hours. If a user starts session recording on red.thycotic.com, and then opens a tab for blue.thycotic.com, session recording will continue on blue.thycotic.com when it is in focus. By default, session recording will stop after two hours, and both tabs will close. This session recording limit is now configurable via the Native Messaging Host and can be extended to a maximum of eight hours.
+The default maximum recording time for each session (start to end) regardless of how many tabs are open, is two hours. If a user starts session recording on red.thycotic.com, and then opens a tab for blue.thycotic.com, session recording will continue on blue.thycotic.com when it is in focus. By default, session recording will stop after two hours, and both tabs will close. This session recording limit can be extended to a maximum of eight hours by configuring the [Native Messaging Host](../native.md) file.
 
 If you want to capture other sites with different subdomains that launch from the same Secret, you must use RegEx to configure the Secret to include the other URLs.
 
@@ -69,14 +69,10 @@ When a user is logged into a website using a secret and session recording is ena
 
 The template is now ready to be used in WPF.
 
-## Functional Updates/Improvements in WPF 2.0.2
+If you have session recording enabled for two secrets that contain the same primary or secondary domain (e.g. microsoftonline.com) and the same host name (e.g. microsoftonline.com) AND both secrets are used, WPF will close the first session when the second session is selected, closing the tabs associated with the first secret. This is expected behavior, ensuring that the only sessions recorded are those associated with secrets that require session recording. Sites like _microsoftonline_ only allow one login / active credential at a time.
 
-If you have session recording enabled for two secrets that contain the same primary or secondary domain (e.g. microsoftonline.com) and the same host name (e.g. microsoftonline.com) AND both secrets are used, WPF will close the first session when the second session is selected, closing the tabs associated with the first secret.  
-This is expected behavior and done to ensure that we only record sessions associated with secrets that require session recording. Sites like _microsoftonline_ only allow one login / active credential at a time.
-
-If you have session recording enabled for two secrets that do not contain a primary / secondary domain (e.g. .net, .com, .co.in) address, both secrets will be recorded independently.  
-For instance red.local.something is not the same as blue.local.something because “something” is neither a primary domain or secondary domain identifier.
+If you have session recording enabled for two secrets that do not contain a primary / secondary domain (e.g. .net, .com, .co.in) address, both secrets will be recorded independently. For instance red.local.something is not the same as blue.local.something because “something” is neither a primary domain or secondary domain identifier.
 
 IP Addresses are now treated as an entirely unique address  (e.g. 10.0.0.61 is not the same as 10.0.0.51) and will be recorded independently.
 
->**Note**: WPF does session recording for the account that was used to login to the Windows Admin Center directly, but WPF CANNOT record the RDP sessions that is logged into after that. this is due to the main browser window still looking at the Windows Admin Center URL not the RDP window that is nested inside the browser page.
+>**Note**: WPF records sessions for the account that was used to log into the Windows Admin Center directly. However, WPF **cannot** record RDP sessions logged into after that, because the main browser window still referes to the Windows Admin Center URL, and **not** to the RDP window nested inside the browser page.
