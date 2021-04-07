@@ -1,6 +1,7 @@
 [title]: # (Checkmarx Results)
 [tags]: # (WPF)
 [priority]: # (101)
+
 # Checkmarx Results
 
 ![logo](images/checkmarx-brand.png "Checkmarx Company Logo")
@@ -17,8 +18,8 @@ Based on the report results there are no Medium/High issues found, and nothing c
 * Scan Time: 00h:09m:34s
 * Lines Of Code Scanned: 112606
 * Files Scanned: 212
-* Report Creation Time Tuesday, September 15, 2020 1:53:44 AM 
-* Online Results: [http://WIN-282IB73823V/CxWebClient/ViewerMain.aspx?scanid=1096154&projectid=128](http://win-282ib73823v/CxWebClient/ViewerMain.aspx?scanid=1096154&projectid=128)
+* Report Creation Time Tuesday, September 15, 2020 1:53:44 AM
+* Online Results: No longer available
 * Team: CxServer
 * Checkmarx Version: 8.8.0.72 HF9
 * Scan Type: Full
@@ -30,7 +31,7 @@ Based on the report results there are no Medium/High issues found, and nothing c
 
 #### Severity
 
-* Included: High, Medium 
+* Included: High, Medium
 * Excluded: Low, Information
 
 #### Result State
