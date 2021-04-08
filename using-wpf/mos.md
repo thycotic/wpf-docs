@@ -1,6 +1,7 @@
 [title]: # (Microsoft Online Services)
 [tags]: # (troubleshooting)
 [priority]: # (30)
+
 # Using Web Password Filler with Microsoft Online Services
 
 This section guides users through using the Web browser extension to use Secret Server WPF to login to Microsoft Online. Launching Microsoft Online secrets with WPF takes a bit of extra configuration. This section explains the issue and suggests remedies.
@@ -47,7 +48,7 @@ There are two ways to do this:
 If you have not yet created the secret, follow this method:
 
 1. Go to the Microsoft Online log on (you already have an account and log on) or log-on setup page (you are setting up a new log on).
-1. Follow the [Creating a Secret](../../ss/10.8.0/secret-management/procedures/creating-secrets/index.md) procedure.
+1. Follow the [Creating Secrets](https://thy.center/ss/link/CreatingSecrets) procedure.
 1. When you get to the *second* "Add Account to Secret Server" popup, which looks like this:
 
    ![image-20191212114103031](images/image-20191212114103031.png)
@@ -55,12 +56,12 @@ If you have not yet created the secret, follow this method:
    You now see the website URL that WPF inferred, which is incorrect. The secret name was inferred too—leave it as is or change it to whatever you like.
 
 1. Delete all the text after .com in the **URL** text box. Your URL should look like this: `https://login.microsoftonline.com`
-1. Return to and complete the rest of the instructions for the [Creating a Secret](../../ss/10.8.0/secret-management/procedures/creating-secrets/index.md) procedure.
+1. Return to and complete the rest of the instructions for the [Creating Secrets](https://thy.center/ss/link/CreatingSecrets) procedure.
 
 ## Fixing the Issue After Having Saved the WPF Secret
 
 1. Login to SS.
-1. Navigate to the WPF secret for that Microsoft Online site. It is most likely named **login.microsoftonline.com**, which is the inferred name from WPF. See [Searching Secrets](#searching-secrets) if you do no know where to find it.
+1. Navigate to the WPF secret for that Microsoft Online site. It is most likely named **login.microsoftonline.com**, which is the inferred name from WPF.
 1. On the **General** tab for the secret, click the **Edit** link next to the **URL** text box:
 
    ![image-20191213160815751](images/image-20191213160815751.png)
