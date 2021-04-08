@@ -165,7 +165,7 @@ __Where__:
 | HideSettingPage | false | Boolean that controls if the Settings tab is visible or not. |
 | SettingUserSSLogin | true | Boolean that sets the checkbox to enable the Secret Server Login option. |
 | SettingPrompToSave | true | Boolean that sets the checkbox to enable the Prompt to Save option. |
-| SettingShowPopUp | true | Boolean ??????? |
+| SettingShowPopUp | true | Boolean that enables login credentials to pop up automatically. If false you just need to click the Thycotic checkmark.  |
 | SettingHideReadOnlyFolders | true | Boolean that sets the checkbox to enable the Hide Read Only Folder option. |
 | SettingEnableAutoPopulate | true | Boolean that sets the checkbox to enable the Auto Populate option for secrets and passwords. |
 | EnableForAllUsers | false | Boolean specifying if the Native Messaging Host is available under the local user context only or made available for all users. If set to true, it allows all users on the machine to access the settings.json file as long as it's in a shared location. If set to false it only applies to the current logged in user no matter where the file is stored. Changes impacting the registry keys also require admin permissions if EnableForAllUsers is set to true. |
@@ -200,7 +200,7 @@ Additionally, you can choose to hide these pages from the end user so that the s
 
 ### Error Messages
 
-Error messages are recorded in the file named native-messaging, which is stored in the folder where you installed Native Messaging Host. The error messages in this file are especially useful when contacting Thycotic support services.
+Error messages are recorded in the file named native-messaging, which is stored in the same folder where you installed Native Messaging Host. The error messages in this file are especially useful when contacting Thycotic support services.
 
 * The following error message indicates that there are missing elements in the settings.json.
 
