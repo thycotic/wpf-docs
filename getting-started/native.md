@@ -34,8 +34,8 @@ Download the Native Messaging Host installer [here](https://thy.center/wpf/link/
 
 Additional information regarding Native Messaging can be found at
 
-* https://developer.chrome.com/extensions/nativeMessaging
-* https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging
+* <https://developer.chrome.com/extensions/nativeMessaging>
+* <https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging>
 
 ### Installation
 
@@ -63,11 +63,17 @@ To disable or remove the Native Messaging Host, use the `–unregister` option, 
 
 Native Messaging Host facilitates the management of Web Password Filler settings through modification of a _settings.json_ file. Each time the user’s browser is launched, the Native Messaging Host reads the default configurations and settings in the json file and silently sends them to the Web Password Filler. The Web Password Filler then updates the local storage with the new settings and configurations.
 
+### Establishing Default Settings and Browser-Specific Overrides
+
+The `settings.json` file begins with a line for each browser, with the browser's identification code. In the image below, these lines are identified by the label, **Browser IDs**. The next lines in the file, labeled **Default Settings** in the image, establish your default settings for the Native Messaging Host. The default settings apply to all browsers unless a browser-specific setting overrides the default. Each browser has its own section of code for overrides, labeled **Default Overrides per Browser** in the image. The first line in the section identifies the browser with the same identifier used at the beginning of the file. The lines that follow in the section mirror the lines used to establish the Native Messaging Host default settings. For each line where the browser-specific value differs from the default value, the browser-specific value takes precedence, overriding the default value.
+
+![Configuration Tab](images/json-callouts.png "Configuration tab")
+
 ### Settings.json Format
 
-We recommend validating the _settings.json_ file prior to deployment to ensure that the json is formatted correctly. There are many free online tools for validating json files.
+Belowis an example _settings.json_ file that sets the Secret Server URL to `<https://SomeURL/SecretServer>`, sets the domain to “local” and enables various other options for the Thycotic Web Password Filler.
 
-Here is an example _settings.json_ file that sets the Secret Server URL to `<https://SomeURL/SecretServer>`, the domain to “local” and enables all available options that are provided with the Thycotic Web Password Filler as well as hides the configuration and settings pages from the end users.
+We recommend validating the _settings.json_ file prior to deployment to ensure that the json is formatted correctly. There are many free online tools for validating json files.
 
 ```json
 {
@@ -76,7 +82,7 @@ Here is an example _settings.json_ file that sets the Secret Server URL to `<htt
   "operaExtensionId": "eemnnadjdifcpkcnpalolohpepihhbbo",
   "firefoxExtensionId": "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com",
   "ConfigSSUrl": "https://SomeURL/SecretServer",
-  "ConfigDomain": "",
+  "ConfigDomain": "local",
   "HideConfigPage": false,
   "HideSettingPage": false,
   "SettingUserSSLogin": true,
@@ -154,11 +160,12 @@ __Where__:
 | operaExtensionId | "eemnnadjdifcpkcnpalolohpepihhbbo" | This is the ID required for the Opera browser registration. |
 | firefoxExtensionId | "dd1e31d5-3623-45cb-b1ad-64074d36b360@thycotic.com" | This is the ID required for the Firefox browser registration. |
 | ConfigSSUrl | "https://SomeURL/SecretServer" | This is the URL for your Secret Server instance. |
-| ConfigDomain | "" | This is the domain identification either local or your corporate network domain. |
+| ConfigDomain | "local" | This is the domain identification either local or your corporate network domain. |
 | HideConfigPage | false | Boolean that controls if the Configuration tab is visible or not. |
 | HideSettingPage | false | Boolean that controls if the Settings tab is visible or not. |
 | SettingUserSSLogin | true | Boolean that sets the checkbox to enable the Secret Server Login option. |
 | SettingPrompToSave | true | Boolean that sets the checkbox to enable the Prompt to Save option. |
+| SettingShowPopUp | true | Boolean ??????? |
 | SettingHideReadOnlyFolders | true | Boolean that sets the checkbox to enable the Hide Read Only Folder option. |
 | SettingEnableAutoPopulate | true | Boolean that sets the checkbox to enable the Auto Populate option for secrets and passwords. |
 | EnableForAllUsers | false | Boolean specifying if the Native Messaging Host is available under the local user context only or made available for all users. If set to true, it allows all users on the machine to access the settings.json file as long as it's in a shared location. If set to false it only applies to the current logged in user no matter where the file is stored. Changes impacting the registry keys also require admin permissions if EnableForAllUsers is set to true. |
@@ -181,19 +188,21 @@ To exclude all sites, a wild card can be used (`https://*` and/or `http://*`) an
 
 Each setting on the settings page can be set using “true” or “false” in the _settings.json_.
 
-![](images/settings2.png "Settings tab")
+![Settings Tab](images/settings2.png "Settings tab")
 
 The Secret Server URL and Domain can be set by including strings (text wrapped up in quotations).
 
-![](images/config.png "Configuration tab")
+![Configuration Tab](images/config.png "Configuration tab")
 
 Additionally, you can choose to hide these pages from the end user so that the settings and configuration options cannot be changed.
 
-![](images/login.png "Hide Settings and Configuration from the Login dialog")
+![Login Tab](images/login.png "Hide Settings and Configuration from the Login dialog")
 
 ### Error Messages
 
-* The following error message indicates that there are missing elements in the settings.json. 
+Error messages are recorded in the file named native-messaging, which is stored in the folder where you installed Native Messaging Host. The error messages in this file are especially useful when contacting Thycotic support services.
+
+* The following error message indicates that there are missing elements in the settings.json.
 
    ```bash
    There are elements missing from settings.json. Review the documentation and update setting.json with the missing attributes.
