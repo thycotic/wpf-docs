@@ -5,6 +5,10 @@
 
 This topic provides a chronological list of documentation changes. Minor content alterations are not tracked.
 
+## May 2021
+
+* [Release Notes](../release-notes/2.0.6.md)
+
 ## March 2021
 
 * [Release Notes](../release-notes/2.0.5.md)
