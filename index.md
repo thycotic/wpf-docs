@@ -1,6 +1,7 @@
 [title]: # (Web Password Filler)
 [tags]: # (WPF)
 [priority]: # (1)
+
 # Web Password Filler
 
 The Thycotic Web Password Filler (WPF) is a Web browser extension to help users log on their sites. It allows browsers to find and enter credentials of users, when a Secret Server instance has secrets related to that website.
