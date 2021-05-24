@@ -1,6 +1,7 @@
 [title]: # (Release Notes)
 [tags]: # (web password filler)
 [priority]: # (30000)
+
 # Release Notes
 
 This section includes the most recent Web Password Filler Release Notes.
