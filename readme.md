@@ -2,6 +2,7 @@
 [tags]: # (readme)
 [priority]: # (1)
 [display]: # (none)
+
 # Web Password Filler - ReadMe
 
 Welcome to the public documentation repository for Thycotic's Web Password Filler (WPF).
