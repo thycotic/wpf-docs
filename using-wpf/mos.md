@@ -51,7 +51,7 @@ If you have not yet created the secret, follow this method:
 1. Follow the [Creating Secrets](https://thy.center/ss/link/CreatingSecrets) procedure.
 1. When you get to the *second* "Add Account to Secret Server" popup, which looks like this:
 
-   ![image-20191212114103031](images/image-20191212114103031.png)
+   ![image-20191212114103031](images/add-acct-to-ss-2.png)
 
    You now see the website URL that WPF inferred, which is incorrect. The secret name was inferred too—leave it as is or change it to whatever you like.
 

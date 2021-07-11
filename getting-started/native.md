@@ -184,19 +184,17 @@ To exclude all sites, a wild card can be used (`https://*` and/or `http://*`) an
 
 >**Note**: Only the “Exclude” section accepts a wild card. The “ExcludeException” must be the exact URL without a query string.
 
-### UI Behavior Based on Settings
+### UI Behavior Based on Preferences
 
-Each setting on the settings page can be set using “true” or “false” in the _settings.json_.
+Each preference on the Preferences page can be set using “true” or “false” in the _settings.json_.
 
-![Settings Tab](images/settings2.png "Settings tab")
+![Settings Tab](images/preferences.png "Settings tab")
 
 The Secret Server URL and Domain can be set by including strings (text wrapped up in quotations).
 
-![Configuration Tab](images/config.png "Configuration tab")
+![Configuration Tab](images/url-domain.png "Configuration tab")
 
 Additionally, you can choose to hide these pages from the end user so that the settings and configuration options cannot be changed.
-
-![Login Tab](images/login.png "Hide Settings and Configuration from the Login dialog")
 
 ### Error Messages
 

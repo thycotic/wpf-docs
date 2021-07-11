@@ -26,7 +26,7 @@ To use the __Password Filler__ icon of WPF to log on Secret Server:
 1. Click the __Login__ button. If you do not have two-factor authentication enabled in Secret Server, you are now logged in.
 1. If you have two-factor authentication enabled in Secret Server (and your login was authenticated), you are sent to the __Two Factor__ screen to complete the second authentication. Click **Push Duo** to authenticate with your Duo app, or click **Phone** to receive an authentication text message with a PIN code to enter in the __Pin Code__ field, then click **Login**.
 
-   You are now logged in to Secret Server, and the WPF icon changes to![img](images/clip_image009.png "Logged in icon")
+   You are now logged in to Secret Server, and the WPF icon changes to ![img](images/clip_image009.png "Logged in icon")
 
 ## Logging into Secret Server via the WPF Secret Server Button
 
