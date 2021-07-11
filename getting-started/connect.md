@@ -10,12 +10,15 @@ To connect WPF with Secret Server:
 1. Open Google Chrome or any other supported browser.
 1. In the upper-right corner of the browser, click the __Password Filler__ ![image-20191205103957493](images/image-20191205103957493.png "WPF icon") icon. The WPF login window appears:
 
-   ![images/image-20191205101713805](images/image-20191205101713805.png "Login information")
-1. Click the __Configuration__ tab:
+   ![images/image-20191205101713805](images/username-pwd.png "Login information")
 
-   ![image-20191205101911389](images/image-20191205101911389.png "Configuration information")
+1. Click __Back__ in the upper left corner.
+
+   ![image-20191205101911389](images/url-domain.png "Configuration information")
+
 1. In the __Secret Server URL__ field, type your Secret Server URL. For example: `https://myserver/secretserver/`
 1. In the __Domain__ field, type the domain of Secret Server. This only applies if you set up Secret Server to use a domain otherwise it is Local by default. This should match the options configured in Secret Server for this sign in page:
 
-   ![connect-5](images/connect-5.png "Example of the domain information set up for signing into Secret Server")
-1. Click the __Save__ button. A confirmation message appears. WPF's connection settings are now saved.
+   ![connect-5](images/username-pwd-domain.png "Example of the domain information set up for signing into Secret Server")
+
+1. Click the __Login__ button.
