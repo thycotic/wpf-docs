@@ -6,11 +6,11 @@
 
 When you are already logged into Web Password Filler, click the WPF icon![img](images/clip_image009.png "Logged in icon"). The **Settings** screen appears.
 
-![settings](images/settings-small.png "WPF Settings Menu")
+![settings-small.png](images/settings-small.png "Settings Screen")
 
 Click **Preferences**. The Preferences screen appears.
 
-![settings](images/preferences.png "WPF Settings Menu")
+![preferences.png](images/preferences.png "Preferences Screen")
 
 * __Prompt to save credentials__: Select this preference is you want WPF to prompt you to save your login credentials for future logins. Not recommended for shared systems. The prompt only appears if an existing secret is updated, or if a user enters credentials for a site and no Secret was used.
 

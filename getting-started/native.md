@@ -188,11 +188,11 @@ To exclude all sites, a wild card can be used (`https://*` and/or `http://*`) an
 
 Each preference on the Preferences page can be set using “true” or “false” in the _settings.json_.
 
-![Settings Tab](images/preferences.png "Settings tab")
+![preferences.png ](images/preferences.png "Preferences Tab")
 
 The Secret Server URL and Domain can be set by including strings (text wrapped up in quotations).
 
-![Configuration Tab](images/url-domain.png "Configuration tab")
+![url-domain.png](images/url-domain.png "URL and Domain")
 
 Additionally, you can choose to hide these pages from the end user so that the settings and configuration options cannot be changed.
 

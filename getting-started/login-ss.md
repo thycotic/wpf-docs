@@ -17,7 +17,7 @@ To use the __Password Filler__ icon of WPF to log on Secret Server:
 1. Open, for example, __Google Chrome__.
 1. In the upper-right corner of the browser, click the __Password Filler__ ![image-20191205103957493](images/image-20191205103957493.png "WPF icon") icon. The WPF login window appears:
 
-   ![image-20191205101713805](images/username-pwd.png "Login modal")
+   ![username-pwd.png](images/username-pwd.png "Username and Password")
 
 1. For __Username__, type the username you use to access Secret Server. This is your Secret Server user name and not your email address.
 1. For __Password__, enter the password for your account.
@@ -37,7 +37,7 @@ The __Login with Secret Server__ button allows you to log in to WPF using a redi
 1. Open, for example, __Google Chrome__.
 1. In the upper-right corner of the browser, click the __Password Filler__ ![image-20191205103957493](images/image-20191205103957493.png "WPF icon") icon. If you already have enabled the __Use Secret Server to login__ option, the Login screen will display fields for your Secret Server URL and Domain, as well as a __Login with Secret Server__ toggle button.
 
-   ![image-20191205114940336](images/url-domain.png "WPF Login modal")
+   ![url-domain.png](images/url-domain.png "URL and Domain")
 
 
 1. Click the __Login with Secret Server__ toggle button. WPF opens a new tab for Secret Server in the browser, where you can log into Secret Server. After logging into Secret Server, a token is automatically generated for you. A window opens briefly showing the Generate Token button being pushed automatically, then the window quickly closes.  
