@@ -6,6 +6,7 @@
 
 This section includes the most recent Web Password Filler Release Notes.
 
+* [3.0.0 Release Notes](3.0.0.md)
 * [2.0.6 Release Notes](2.0.6.md)
 * [2.0.5 Release Notes](2.0.5.md)
 * [2.0.4 Release Notes](2.0.4.md)

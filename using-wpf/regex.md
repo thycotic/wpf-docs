@@ -75,4 +75,4 @@ If you have session recording enabled for two secrets that do not contain a prim
 
 IP Addresses are now treated as an entirely unique address  (e.g. 10.0.0.61 is not the same as 10.0.0.51) and will be recorded independently.
 
->**Note**: WPF records sessions for the account that was used to log into the Windows Admin Center directly. However, WPF **cannot** record RDP sessions logged into after that, because the main browser window still referes to the Windows Admin Center URL, and **not** to the RDP window nested inside the browser page.
+>**Note**: WPF records sessions for the account that was used to log into the Windows Admin Center directly. However, WPF **cannot** record RDP sessions logged into after that, because the main browser window still refers to the Windows Admin Center URL, and **not** to the RDP window nested inside the browser page.
