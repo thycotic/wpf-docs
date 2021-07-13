@@ -10,7 +10,7 @@ Use the WPF icon to logout:
    ![image](images/clip_image009.png "WPF icon")
 1. The WPF logout modal opens.
 
-   ![image-20191205115528914](images/image-20191205115528914.png "Logout modal")
+   ![settings-small.png](images/settings-small.png "Settings")
 
    Click __Logout__.
 1. The WPF icon changes to:

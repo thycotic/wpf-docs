@@ -1,6 +1,7 @@
 [title]: # (Getting Started)
 [tags]: # (WPF)
 [priority]: # (2)
+
 # Getting Started
 
 Please set up WPF in the following order:
@@ -12,7 +13,7 @@ Please set up WPF in the following order:
 1. [Configure WPF to point to Secret Server](connect.md).
 1. [Login to Secret Server via WPF](login-ss.md).
 
->**Note**: In order for the WPF to work correctly with Secret Server, Web Services need to be enabled in Secret Server. 
+>**Note**: In order for the WPF to work correctly with Secret Server, Web Services need to be enabled in Secret Server.
 
 ## Enable Web Services in Secret Server
 

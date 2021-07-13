@@ -1,23 +1,27 @@
 [title]: # (Creating a Secret for a Website)
 [tags]: # (WPF)
 [priority]: # (4)
+
 # Creating a Secret for a Website
 
 1. Navigate to the __create a new account__ form on the website you want to create a secret for.
+
 1. Click the Thycotic icon in the password text box. A modal appears:
 
    ![image-20191205162836870](images/image-20191205162836870.png "No Secrets found modal")
 
    You can also select the username or password fields and right-click and go to __Password Filler | Add Secret__.
+
 1. Click the __Add Secret__ button. The __Add Account to Secret Server__ modal appears:
 
-   ![image-20191205162946063](images/image-20191205162946063.png "Add Account to Secret Server")
+   ![add-acct-to-ss-1](images/add-acct-to-ss-1.png "Add Account")
+
 1. Begin typing "web" in the __Choose a Secret Template__ search box. The word Web Password will appear in a dropdown list. By default, WPF tries to add the standard Web Password template for you. You can search for a different template.
 1. Click the __Web Password__ suggestion. The search box is populated with it.
 1. Type the name of the Secret Server folder in which you want the secret to reside. If you did not already set one up, by default, Secret Server creates a folder titled with your Secret Server username. Click to select the desired folder in the drop-down that appears. By default, WPF tries to select the personal folder for the username that you used for the login. If one does not exist, you will need to specify which folder to save it to.
 1. Click __OK__. Another __Add Account to Secret Server__ modal appears:
 
-   ![image-20191205163452160](images/image-20191205163452160.png "Second Add Account to Secret Server")
+   ![add-acct-to-ss-2](images/add-acct-to-ss-2.png "Second Add Account to Secret Server")
 
    Secret Server fills in some of the text boxes for you based on the current website.
 
