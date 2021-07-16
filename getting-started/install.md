@@ -6,7 +6,7 @@
 
 To use the Web Password Filler, install one of the supported browser extensions as described below:
 
-* **Chrome:** Install the extension by clicking the Web launcher icon in a Web Password secret, or by downloading it from the Google [Chrome](https://chrome.google.com/webstore/detail/secret-server-web-passwor/mfpddejbpnbjkjoaicfedaljnfeollkh?hl=en) add-ons site.
+* **Chrome:** Install the extension by clicking the Web launcher icon in a Web Password secret, or by downloading it from the Google [Chrome](https://chrome.google.com/webstore/detail/secret-server-web-passwor/mfpddejbpnbjkjoaicfedaljnfeollkh?hl=en) add-ons site. Also see [Managing Extensions in Your Enterprise](https://docs.google.com/document/d/1pT0ZSbGdrbGvuCsVD2jjxrw-GVz-80rMS2dgkkquhTY/edit#heading=h.7jw8arkocgc7) on securely managing Chrome extensions at scale.
 
 * **Edge Chromium:** Install the extension by downloading it from the Microsoft [Edge](https://microsoftedge.microsoft.com/addons/detail/kjldmpkefedgljefehmmfifbhnjngmbh) add-ons site.
 
